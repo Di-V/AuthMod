@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "585310840642",
+    "firebase_url": "https://authmod.firebaseio.com",
+    "project_id": "authmod",
+    "storage_bucket": "authmod.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585310840642:android:a46e556c1127aec0",
+        "android_client_info": {
+          "package_name": "app.di_v.authmod"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "585310840642-bobiucd76cbe9jcbqn57rcdmnnjelddj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.di_v.authmod",
+            "certificate_hash": "adc1c6fc5f731e59387fe8ad12bab5837554ff27"
+          }
+        },
+        {
+          "client_id": "585310840642-tvi3uqntargrukupr47laa55peskp78e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBv4B9kzEi_dQMwvFVOJePSB9DXjfkmlvM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "585310840642-tvi3uqntargrukupr47laa55peskp78e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
