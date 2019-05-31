@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Auth Mod</string>
+    <string name="title_activity_login">Аутентификация</string>
+    <string name="invalid_username">Неверное имя пользователя</string>
+    <string name="invalid_password">Пароль должен быть > 5 символов</string>
+    <string name="login_failed">"Ошибка аутентификации"</string>
+    <string name="email">Почта...</string>
+    <string name="login">Авторизация</string>
+    <string name="successfully">Подтверждено!</string>
+    <string name="password">Пароль...</string>
+    <string name="dialog_start_scanning_hint">Коснитесь датчика отпечатков пальцев</string>
+    <string name="auth">Аутентификация</string>
+    <string name="cancel">отмена</string>
+    <string name="log_out">Выйти</string>
+    <string name="menu">Меню</string>
+</resources>

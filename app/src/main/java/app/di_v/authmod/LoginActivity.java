@@ -1,5 +1,6 @@
 package app.di_v.authmod;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -19,8 +20,9 @@ import com.google.firebase.auth.FirebaseAuth;
 /**
  * Activity for login user
  */
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener,  FingerprintDialog.Callback {
 
+    private static final String FINGERPRINT_DIALOG = "fingerprint_dialog";
     private static final String TAG = "LoginActivity";
 
     private EditText mEmailField;
@@ -42,6 +44,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         // Buttons
         mBtnAuth = findViewById(R.id.btn_login);
         mBtnAuth.setOnClickListener(this);
+
+        /*Button btnTest = findViewById(R.id.btn_test);
+        btnTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FingerprintDialog dialog = FingerprintDialog.getInstance(LoginActivity.this);
+                dialog.show(getSupportFragmentManager(), FINGERPRINT_DIALOG);
+            }
+        });*/
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
@@ -74,10 +85,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             // Sign in success
                             Log.d(TAG, "signInWithEmail:success");
 
-                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                            startActivity(intent);
 
-                            LoginActivity.this.finish();
+                            FingerprintDialog dialog = FingerprintDialog.getInstance(LoginActivity.this);
+                            dialog.show(getSupportFragmentManager(), FINGERPRINT_DIALOG);
+
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
@@ -88,6 +99,22 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     }
                 });
     }
+
+
+    @Override
+    public void onSuccess(String publicKey) {
+
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(intent);
+
+        LoginActivity.this.finish();
+    }
+
+    @Override
+    public void onClick(DialogInterface dialog, int which) {
+    }
+
+
 
     private void showProgressDialog(boolean chek) {
 

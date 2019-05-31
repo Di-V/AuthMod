@@ -4,7 +4,7 @@
     android:id="@+id/login_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/design_default_color_primary_dark">
+    android:background="@color/blue">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -47,8 +47,8 @@
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
                     android:padding="16dp"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
+                    android:textColor="@color/dark_blue"
+                    android:textColorHint="@color/gray"
                     android:textSize="20dp" />
 
             </android.support.design.widget.TextInputLayout>
@@ -72,8 +72,8 @@
                     android:inputType="textPassword"
                     android:maxLines="1"
                     android:padding="16dp"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
+                    android:textColor="@color/dark_blue"
+                    android:textColorHint="@color/gray"
                     android:textSize="20dp" />
 
             </android.support.design.widget.TextInputLayout>
@@ -86,9 +86,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="8dp"
-                android:background="@drawable/green_btn_style"
+                android:background="@drawable/btn_style"
                 android:text="@string/login"
-                android:textColor="@color/white"
+                android:textColor="@color/dark_blue"
                 android:textSize="20dp" />
 
             <ProgressBar
@@ -97,6 +97,8 @@
                 style="?android:attr/progressBarStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
+
 
         </LinearLayout>
 
